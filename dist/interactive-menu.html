@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Menu - L'ÉCLAT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#484742",
+                      "on-error": "#690005",
+                      "on-secondary": "#31302c",
+                      "on-primary-fixed": "#261a00",
+                      "primary": "#e5c483",
+                      "error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#474646",
+                      "primary-fixed-dim": "#e3c281",
+                      "surface-variant": "#343535",
+                      "surface-container": "#1e2020",
+                      "on-background": "#e3e2e2",
+                      "outline": "#998f81",
+                      "inverse-surface": "#e3e2e2",
+                      "surface-tint": "#e3c281",
+                      "on-tertiary": "#313030",
+                      "secondary-container": "#484742",
+                      "surface-container-highest": "#343535",
+                      "on-primary": "#402d00",
+                      "surface-container-low": "#1a1c1c",
+                      "inverse-on-surface": "#2f3131",
+                      "tertiary-fixed-dim": "#c9c6c5",
+                      "inverse-primary": "#735b24",
+                      "secondary-fixed": "#e6e2db",
+                      "tertiary-container": "#afacac",
+                      "surface-dim": "#121414",
+                      "on-secondary-container": "#b8b5ae",
+                      "secondary": "#c9c6c0",
+                      "surface-container-lowest": "#0d0e0f",
+                      "on-primary-container": "#533d07",
+                      "surface-container-high": "#292a2a",
+                      "surface-bright": "#38393a",
+                      "tertiary-fixed": "#e5e2e1",
+                      "on-surface": "#e3e2e2",
+                      "primary-container": "#c8a96a",
+                      "on-error-container": "#ffdad6",
+                      "error": "#ffb4ab",
+                      "on-secondary-fixed": "#1c1c18",
+                      "background": "#121414",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-tertiary-container": "#414040",
+                      "tertiary": "#cac7c7",
+                      "on-primary-fixed-variant": "#5a430e",
+                      "surface": "#121414",
+                      "primary-fixed": "#ffdf9f",
+                      "secondary-fixed-dim": "#c9c6c0",
+                      "outline-variant": "#4d463a",
+                      "on-surface-variant": "#d0c5b5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "24px",
+                      "unit": "8px",
+                      "section-padding": "160px",
+                      "margin-desktop": "80px",
+                      "container-max": "1440px",
+                      "gutter": "32px",
+                      "stack-lg": "80px",
+                      "stack-md": "32px",
+                      "stack-sm": "16px"
+              },
+              "fontFamily": {
+                      "display-xl": [
+                              "Bodoni Moda"
+                      ],
+                      "label-caps": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-xl-mobile": [
+                              "Bodoni Moda"
+                      ],
+                      "headline-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "headline-lg-mobile": [
+                              "Bodoni Moda"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Bodoni Moda"
+                      ],
+                      "label-sm": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "display-xl": [
+                              "80px",
+                              {
+                                      "lineHeight": "90px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.2em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "display-xl-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "52px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "38px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #090909;
+            color: #e3e2e2;
+            overflow-x: hidden;
+        }
+
+        /* Subtle Noise Texture */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+
+        .ambient-glow {
+            position: absolute;
+            width: 60vw;
+            height: 60vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(200, 169, 106, 0.08) 0%, rgba(9, 9, 9, 0) 70%);
+            top: -10%;
+            right: -10%;
+            z-index: -1;
+            filter: blur(80px);
+            animation: pulse 15s ease-in-out infinite alternate;
+        }
+        
+        .ambient-glow-2 {
+            position: absolute;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(200, 169, 106, 0.05) 0%, rgba(9, 9, 9, 0) 70%);
+            bottom: -5%;
+            left: -5%;
+            z-index: -1;
+            filter: blur(60px);
+            animation: pulse 20s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1) translate(0, 0); opacity: 0.5; }
+            100% { transform: scale(1.1) translate(-2%, 2%); opacity: 0.8; }
+        }
+
+        .stagger-enter {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .category-nav-link {
+            position: relative;
+        }
+        .category-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            width: 0;
+            height: 1px;
+            background-color: theme('colors.primary');
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+        .category-nav-link:hover::after, .category-nav-link.active::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .gold-badge {
+            color: #c8a96a;
+        }
+        .gold-border {
+            border: 1px solid rgba(200, 169, 106, 0.3);
+        }
+
+        /* Button Hover */
+        .btn-ghost-gold {
+            border: 1px solid #e5c483;
+            color: #e3e2e2;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-ghost-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #e5c483;
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s ease;
+        }
+        .btn-ghost-gold:hover {
+            color: #090909;
+        }
+        .btn-ghost-gold:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+      </style>
+  <link rel="stylesheet" crossorigin href="/assets/cursor-BGy_VQUZ.css">
+</head>
+<body class="antialiased min-h-screen relative font-body-md selection:bg-primary selection:text-on-primary">
+<div class="noise-overlay"></div>
+<div class="ambient-glow"></div>
+<div class="ambient-glow-2"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-sm transition-all duration-700 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-display-xl-mobile md:font-display-xl text-headline-lg-mobile md:text-headline-lg text-primary tracking-tighter hover:scale-[1.02] transition-transform duration-700" href="index.html">L'ÉCLAT</a>
+<div class="hidden md:flex space-x-gutter items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 hover:bg-primary/10 px-4 py-2 rounded uppercase" href="the-experience.html">Experience</a>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary transition-colors duration-500 px-4 py-2 rounded uppercase" href="interactive-menu.html">Menu</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 hover:bg-primary/10 px-4 py-2 rounded uppercase" href="our-story.html">Story</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 hover:bg-primary/10 px-4 py-2 rounded uppercase" href="contact-reservations.html">Contact</a>
+</div>
+<a class="hidden md:inline-flex btn-ghost-gold font-label-caps text-label-caps uppercase px-6 py-3 rounded-DEFAULT magnetic-target" href="#reservations">Book a Table</a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-[160px] pb-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Header -->
+<header class="text-center my-stack-lg stagger-enter" style="animation-delay: 0.1s;">
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-white mb-4">Culinary Canvas</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">A seasonal exploration of texture, origin, and imagination. Curated by Executive Chef Laurent.</p>
+</header>
+<!-- Category Navigation -->
+<div class="flex justify-center gap-8 mb-stack-lg border-b border-white/10 pb-4 overflow-x-auto stagger-enter" style="animation-delay: 0.2s;">
+<button class="category-nav-link active font-label-caps text-label-caps text-primary uppercase tracking-widest">Starters</button>
+<button class="category-nav-link font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Main Course</button>
+<button class="category-nav-link font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Desserts</button>
+<button class="category-nav-link font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Drinks</button>
+</div>
+<!-- Menu Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Item 1 (Chef's Rec) -->
+<article class="glass-card rounded-xl overflow-hidden p-6 flex flex-col gap-4 gold-border stagger-enter relative" style="animation-delay: 0.3s;">
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md px-3 py-1 rounded-full border border-primary/30 z-10 flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1; color: #c8a96a;">star</span>
+<span class="font-label-caps text-[10px] uppercase tracking-widest gold-badge">Chef's Choice</span>
+</div>
+<div class="aspect-[4/3] rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A macro, top-down culinary photograph of a delicate scallop carpaccio on a dark, textured artisan plate. The dish features translucent slices of scallop adorned with micro-greens, edible gold leaf, and vibrant drops of citrus oil. The lighting is dramatic and directional, highlighting the wet, glossy textures against the matte plate. High-end fine dining aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAli5WLjqraD-uLh_3Xjpwhmr1hCP374aQMLvMDxqhbouRurDN6MqRGcSt9X-Do0vVbZX7AKRZafh1rjQAOuowNwtdk9YExiqKYf6GmysApcxfujd-BG1MXYdmXpfZqIXw49SY56p7jcsr-4y29auiKiXPR8EjBuJNzEquVcmOAEYc1fHuNcj0VDNPxU6XrzGd7fY5LN6YwxHC31A0kdoEi8otBnUWFXs00s_RQAZn7jVwF4jnasSMlKxGl8V91ceOsewlI0xI58DY=s0"/>
+</div>
+<div class="flex justify-between items-start mt-2">
+<h3 class="font-headline-md text-headline-md text-white">Scallop Carpaccio</h3>
+<span class="font-label-sm text-label-sm text-primary mt-2">€32</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Hokkaido scallops, yuzu kosho emulsion, finger lime, and delicate sea herbs.</p>
+</article>
+<!-- Item 2 -->
+<article class="glass-card rounded-xl overflow-hidden p-6 flex flex-col gap-4 stagger-enter" style="animation-delay: 0.4s;">
+<div class="aspect-[4/3] rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="An elegant food photograph showing a modern interpretation of beef tartare. The finely diced beef is formed into a perfect cylinder, topped with a vibrant quail egg yolk and delicate potato crisps. Plated on a stark white, organically shaped ceramic bowl with a subtle splash of green herb oil. Shot in natural, soft daylight with a shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4DpU3Nom-7x7L2on4dZP4FGBYJIOSjGywkQr0rjKTm2MtQyxqOoue-MrK3LYwLl92AK3jYPMeqcRcDwTBEIiTVdV7-akdqFTS1S8Md6a-9ObcmThETMiGy5VJg26l9f9ezydpIauWCQGwdpzlAt4lbUr0LDcjycvUD_lzm28NT97sj8zriZIHdBpW50rJD7kJ9AdzKWaQPqizFCYTaFk73_3Q75pM621oziYlRM_Bw12LfstORCxhrA561zMJgDUEnhhK6lKRcxw=s0"/>
+</div>
+<div class="flex justify-between items-start mt-2">
+<h3 class="font-headline-md text-headline-md text-white">Wagyu Tartare</h3>
+<span class="font-label-sm text-label-sm text-primary mt-2">€38</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">A5 Wagyu, cured egg yolk, crispy capers, black truffle shavings, toasted brioche.</p>
+</article>
+<!-- Item 3 -->
+<article class="glass-card rounded-xl overflow-hidden p-6 flex flex-col gap-4 stagger-enter" style="animation-delay: 0.5s;">
+<div class="aspect-[4/3] rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A minimalist, high-key culinary shot of an asparagus velouté. A shallow, wide-rimmed matte gray bowl contains a vibrant, smooth green soup. In the center, a perfectly poached quail egg sits atop a small mound of crème fraîche, garnished with delicate chive blossoms. Soft, diffused lighting creates an ethereal, clean atmosphere typical of modern luxury dining." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUvmjl3upFz-AQiGCXXqWiTP5yUkmaexvQV2KJ6SEX_YGSPmGY1RNdgafjeY_m421Rv4Io2-BnOdzlJcRUdJl5YaiDoiwbDBJrHJLlae679czovO3EY-iXUxvqSROuKxj_pVhJer9_UU4X6HrYtOsmpZ6VLnoAukit4dJ9mFkKd7TKb9g1ZhelvACkndxjtb4UCzL2PmsyXDxfMxG_J0yPhK2MMuZSBrf__g41EbvgLKoz9xZPZn6JhG5hY7W_c3a7u6geqyXJfYI=s0"/>
+</div>
+<div class="flex justify-between items-start mt-2">
+<h3 class="font-headline-md text-headline-md text-white">White Asparagus</h3>
+<span class="font-label-sm text-label-sm text-primary mt-2">€28</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Charred white asparagus, smoked almond milk, caviar, lemon verbena oil.</p>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dim w-full py-section-padding flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop space-y-unit mt-stack-lg">
+<div class="font-display-xl-mobile md:font-display-xl text-headline-lg-mobile md:text-headline-lg text-primary mb-8 tracking-tighter">L'ÉCLAT</div>
+<div class="flex space-x-gutter mb-12">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Facebook</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Michelin Guide</a>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant/50 uppercase tracking-widest text-[10px]">
+            © 2024 L'ÉCLAT CULINAIRE. ALL RIGHTS RESERVED.
+        </p>
+</footer>
+<script>
+        // Simple script for category tab visual interaction
+        document.querySelectorAll('.category-nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                document.querySelectorAll('.category-nav-link').forEach(l => {
+                    l.classList.remove('active', 'text-primary');
+                    l.classList.add('text-on-surface-variant');
+                });
+                e.target.classList.add('active', 'text-primary');
+                e.target.classList.remove('text-on-surface-variant');
+            });
+        });
+    </script>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div id="dish-preview-cursor"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="cursor.js"></script>
+</body></html>
