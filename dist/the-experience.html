@@ -182,11 +182,13 @@
             transform: translateY(0);
         }
         .parallax-image {
-            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-            transition: clip-path 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .parallax-image.is-visible {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            opacity: 1;
+            transform: translateY(0);
         }
         .glow-hover:hover::after {
             content: '';
@@ -246,7 +248,7 @@
 </div>
 <div class="md:col-span-5 md:col-start-8 mt-12 md:mt-0 relative">
 <div class="relative w-full aspect-[3/4] overflow-hidden parallax-image">
-<img class="w-full h-full object-cover" data-alt="A close-up, highly detailed shot of a sommelier pouring a deep red wine into a crystal glass. The setting is luxurious and dark, with a soft, warm golden glow highlighting the texture of the liquid and the pristine clarity of the glass. The background is a soft blur of obsidian tones and subtle light reflections, emphasizing the artistry and precision of the service." src="/assets/sommelier-DgJ9Fpwg.png"/>
+<img class="w-full h-full object-cover" data-alt="A close-up, highly detailed shot of a sommelier pouring a deep red wine into a crystal glass. The setting is luxurious and dark, with a soft, warm golden glow highlighting the texture of the liquid and the pristine clarity of the glass. The background is a soft blur of obsidian tones and subtle light reflections, emphasizing the artistry and precision of the service." src="/sommelier.png"/>
 </div>
 </div>
 </div>
