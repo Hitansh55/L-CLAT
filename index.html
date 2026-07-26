@@ -319,7 +319,15 @@
         }
     </style>
     <link rel="stylesheet" href="cursor.css">
+
+    <style>
+        .hero-img, .parallax-img, .reveal-up, .parallax-image, .reveal-text {
+            will-change: transform, opacity;
+            transform: translateZ(0);
+        }
+    </style>
 </head>
+
 <body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary">
 <div class="noise-overlay"></div>
 <div class="cursor-dot"></div>
@@ -344,7 +352,7 @@
 <!-- Hero Section -->
 <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center bg-no-repeat scale-105 hero-img" data-alt="A highly cinematic, ultra-macro shot of a meticulously plated fine dining dish. Dark, moody lighting accentuates the textures of seared wagyu beef, vibrant microgreens, and a drizzle of rich, dark jus. The background fades into a deep, luxurious obsidian black with subtle, smoky atmosphere. Shot on 35mm film with beautiful grain and shallow depth of field, evoking a $30,000 elite restaurant campaign." style="background-image: url('/hero_dish.png')"></div>
+<div class="w-full h-full bg-cover bg-center bg-no-repeat scale-105 hero-img" data-alt="A highly cinematic, ultra-macro shot of a meticulously plated fine dining dish. Dark, moody lighting accentuates the textures of seared wagyu beef, vibrant microgreens, and a drizzle of rich, dark jus. The background fades into a deep, luxurious obsidian black with subtle, smoky atmosphere. Shot on 35mm film with beautiful grain and shallow depth of field, evoking a $30,000 elite restaurant campaign." style="background-image: url('/hero_dish.webp')"></div>
 <div class="absolute inset-0 bg-gradient-to-b from-surface/40 via-surface/20 to-surface"></div>
 </div>
 <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop flex flex-col items-center">
@@ -373,7 +381,7 @@
 </div>
 <div class="md:col-span-5 md:col-start-7 relative mt-12 md:mt-0 ambient-glow">
 <div class="aspect-[3/4] overflow-hidden rounded-sm glass-panel p-2">
-<img loading="lazy" class="w-full h-full object-cover rounded-sm parallax-img" data-alt="An editorial style portrait of a sleek, modern dining room interior in a luxury restaurant. Dramatic chiaroscuro lighting highlights a single, impeccably set table with minimalist glassware and a bespoke ceramic plate. The background is engulfed in sophisticated shadows with a subtle, warm amber glow emanating from a hidden architectural light source. The aesthetic is extremely high-end, moody, and exclusive." src="/dining_room.png"/>
+<img loading="lazy" class="w-full h-full object-cover rounded-sm parallax-img" data-alt="An editorial style portrait of a sleek, modern dining room interior in a luxury restaurant. Dramatic chiaroscuro lighting highlights a single, impeccably set table with minimalist glassware and a bespoke ceramic plate. The background is engulfed in sophisticated shadows with a subtle, warm amber glow emanating from a hidden architectural light source. The aesthetic is extremely high-end, moody, and exclusive." src="/dining_room.webp"/>
 </div>
 </div>
 </div>
