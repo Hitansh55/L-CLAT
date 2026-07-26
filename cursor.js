@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const cursorDot = document.querySelector('.cursor-dot');
+const cursorDot = document.querySelector('.cursor-dot');
     const cursorOutline = document.querySelector('.cursor-outline');
     const magneticTargets = document.querySelectorAll('.magnetic-target');
     
@@ -45,4 +44,3 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-});

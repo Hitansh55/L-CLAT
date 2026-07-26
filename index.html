@@ -183,30 +183,6 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
-        /* Custom Cursor */
-        .cursor-dot, .cursor-outline {
-            position: fixed;
-            top: 0;
-            left: 0;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            z-index: 10000;
-            pointer-events: none;
-        }
-
-        .cursor-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #e5c483;
-        }
-
-        .cursor-outline {
-            width: 40px;
-            height: 40px;
-            border: 1px solid rgba(229, 196, 131, 0.5);
-            transition: width 0.2s, height 0.2s, background-color 0.2s;
-        }
-
         /* Glassmorphism Utilities */
         .glass-panel {
             background: rgba(18, 20, 20, 0.4);
@@ -412,32 +388,6 @@
 <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        // Custom Cursor Logic
-        const cursorDot = document.querySelector('.cursor-dot');
-        const cursorOutline = document.querySelector('.cursor-outline');
-        const magneticTargets = document.querySelectorAll('.magnetic-target');
-        
-        window.addEventListener('mousemove', (e) => {
-            gsap.to(cursorDot, { x: e.clientX, y: e.clientY, duration: 0.1, ease: "power2.out" });
-            gsap.to(cursorOutline, { x: e.clientX, y: e.clientY, duration: 0.4, ease: "power2.out" });
-        });
-
-        magneticTargets.forEach(target => {
-            target.addEventListener('mouseenter', () => {
-                gsap.to(cursorOutline, { scale: 1.5, backgroundColor: 'rgba(229, 196, 131, 0.1)', duration: 0.3 });
-            });
-            target.addEventListener('mouseleave', () => {
-                gsap.to(cursorOutline, { scale: 1, backgroundColor: 'transparent', duration: 0.3 });
-                gsap.to(target, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.3)" });
-            });
-            target.addEventListener('mousemove', (e) => {
-                const rect = target.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
-                gsap.to(target, { x: x * 0.2, y: y * 0.2, duration: 0.3, ease: "power2.out" });
-            });
-        });
-
         // Text Reveals
         document.querySelectorAll('.gsap-reveal-text').forEach(textBlock => {
             let text = textBlock.innerHTML;
@@ -500,4 +450,5 @@
         });
 
     </script>
+    <script type="module" src="/cursor.js"></script>
 </body></html>
