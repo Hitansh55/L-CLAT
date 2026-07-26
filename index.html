@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L'ÉCLAT - Culinary Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#484742",
+                      "on-error": "#690005",
+                      "on-secondary": "#31302c",
+                      "on-primary-fixed": "#261a00",
+                      "primary": "#e5c483",
+                      "error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#474646",
+                      "primary-fixed-dim": "#e3c281",
+                      "surface-variant": "#343535",
+                      "surface-container": "#1e2020",
+                      "on-background": "#e3e2e2",
+                      "outline": "#998f81",
+                      "inverse-surface": "#e3e2e2",
+                      "surface-tint": "#e3c281",
+                      "on-tertiary": "#313030",
+                      "secondary-container": "#484742",
+                      "surface-container-highest": "#343535",
+                      "on-primary": "#402d00",
+                      "surface-container-low": "#1a1c1c",
+                      "inverse-on-surface": "#2f3131",
+                      "tertiary-fixed-dim": "#c9c6c5",
+                      "inverse-primary": "#735b24",
+                      "secondary-fixed": "#e6e2db",
+                      "tertiary-container": "#afacac",
+                      "surface-dim": "#121414",
+                      "on-secondary-container": "#b8b5ae",
+                      "secondary": "#c9c6c0",
+                      "surface-container-lowest": "#0d0e0f",
+                      "on-primary-container": "#533d07",
+                      "surface-container-high": "#292a2a",
+                      "surface-bright": "#38393a",
+                      "tertiary-fixed": "#e5e2e1",
+                      "on-surface": "#e3e2e2",
+                      "primary-container": "#c8a96a",
+                      "on-error-container": "#ffdad6",
+                      "error": "#ffb4ab",
+                      "on-secondary-fixed": "#1c1c18",
+                      "background": "#121414",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-tertiary-container": "#414040",
+                      "tertiary": "#cac7c7",
+                      "on-primary-fixed-variant": "#5a430e",
+                      "surface": "#121414",
+                      "primary-fixed": "#ffdf9f",
+                      "secondary-fixed-dim": "#c9c6c0",
+                      "outline-variant": "#4d463a",
+                      "on-surface-variant": "#d0c5b5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "24px",
+                      "unit": "8px",
+                      "section-padding": "160px",
+                      "margin-desktop": "80px",
+                      "container-max": "1440px",
+                      "gutter": "32px"
+              },
+              "fontFamily": {
+                      "display-xl": [
+                              "Bodoni Moda"
+                      ],
+                      "label-caps": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-xl-mobile": [
+                              "Bodoni Moda"
+                      ],
+                      "headline-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "headline-lg-mobile": [
+                              "Bodoni Moda"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "display-xl": [
+                              "80px",
+                              {
+                                      "lineHeight": "90px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.2em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "display-xl-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "52px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "38px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<style>
+        body {
+            background-color: #090909;
+            color: #e3e2e2;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        /* Subtle Noise Texture */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Custom Cursor */
+        .cursor-dot, .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 10000;
+            pointer-events: none;
+        }
+
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #e5c483;
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(229, 196, 131, 0.5);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+
+        /* Glassmorphism Utilities */
+        .glass-panel {
+            background: rgba(18, 20, 20, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Ambient Glow */
+        .ambient-glow::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle, rgba(200, 169, 106, 0.15) 0%, rgba(200, 169, 106, 0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Hover Reveal Cursor */
+        .dish-hover-target {
+            position: relative;
+        }
+        
+        #dish-preview-cursor {
+            position: fixed;
+            width: 300px;
+            height: 400px;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.8);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            background-size: cover;
+            background-position: center;
+            border-radius: 0.25rem;
+        }
+        
+        #dish-preview-cursor.active {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* Button Hover */
+        .btn-ghost-gold {
+            border: 1px solid #e5c483;
+            color: #e3e2e2;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-ghost-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #e5c483;
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s ease;
+        }
+        .btn-ghost-gold:hover {
+            color: #090909;
+        }
+        .btn-ghost-gold:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        .gsap-reveal-text {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        
+        .gsap-reveal-word {
+            display: inline-block;
+            transform: translateY(110%);
+        }
+        
+        /* Form Inputs */
+        .elegant-input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            color: #e3e2e2;
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-size: 16px;
+            padding: 8px 0;
+            transition: border-color 0.3s ease;
+        }
+        .elegant-input:focus {
+            outline: none;
+            border-bottom-color: #e5c483;
+            box-shadow: none;
+        }
+        
+        /* 3D Tilt Card */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
+        .tilt-card-inner {
+            transform: translateZ(30px);
+        }
+    </style>
+    <link rel="stylesheet" href="cursor.css">
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+<div class="noise-overlay"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+<div id="dish-preview-cursor"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-sm transition-all duration-700 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-display-xl-mobile md:font-display-xl text-headline-lg-mobile md:text-headline-lg text-primary tracking-tighter hover:scale-[1.02] transition-transform duration-700" href="index.html">L'ÉCLAT</a>
+<div class="hidden md:flex space-x-gutter items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 hover:bg-primary/10 px-4 py-2 rounded uppercase" href="the-experience.html">Experience</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 hover:bg-primary/10 px-4 py-2 rounded uppercase" href="interactive-menu.html">Menu</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 hover:bg-primary/10 px-4 py-2 rounded uppercase" href="our-story.html">Story</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 hover:bg-primary/10 px-4 py-2 rounded uppercase" href="contact-reservations.html">Contact</a>
+</div>
+<a class="hidden md:inline-flex btn-ghost-gold font-label-caps text-label-caps uppercase px-6 py-3 rounded-DEFAULT magnetic-target" href="#reservations">Book a Table</a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center bg-no-repeat scale-105 hero-img" data-alt="A highly cinematic, ultra-macro shot of a meticulously plated fine dining dish. Dark, moody lighting accentuates the textures of seared wagyu beef, vibrant microgreens, and a drizzle of rich, dark jus. The background fades into a deep, luxurious obsidian black with subtle, smoky atmosphere. Shot on 35mm film with beautiful grain and shallow depth of field, evoking a $30,000 elite restaurant campaign." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCy7gPyW_ftZo0Nri0_9ghVVnkRJ3q0X0EzOPeLERfggRBs2Xt6ClrA9GUBA-U3XZ825wOWdhGsORMWEdis7Ywrz-x9AFUeFq2aUJOCiP3Mmp9wZG7_g63skM24FBQ92hQd1HYComnPs2Zn6dDKdh_-P9aZyk160cnTqdzZR0TsEBfbky4fuLg0thnVhw94p_s4cpMcvZKyAdCLdFFI0Yy1egRWE94Mx5nGjycT3fA3z-zsGDXTE2BQxCTypsspMvJ6iUvVKGjsC1M=s0')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/40 via-surface/20 to-surface"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop flex flex-col items-center">
+<p class="font-label-caps text-label-caps text-primary tracking-[0.3em] uppercase mb-8 opacity-0 reveal-up">The Apex of Gastronomy</p>
+<h1 class="font-display-xl-mobile md:font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface mb-12 max-w-4xl mx-auto gsap-reveal-text">
+                An Extraordinary <br/> <span class="italic text-primary">Culinary Journey</span>
+</h1>
+<a class="inline-flex btn-ghost-gold font-label-caps text-label-caps uppercase px-8 py-4 rounded-DEFAULT magnetic-target opacity-0 reveal-up delay-300" href="#reservations">Reserve Your Experience</a>
+</div>
+<div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 opacity-0 reveal-up delay-500 flex flex-col items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase text-[10px]">Scroll</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<!-- Experience Section (Editorial Split) -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="experience">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 md:col-start-2 flex flex-col space-y-8 pr-0 md:pr-12">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary gsap-reveal-text">Symphony of Senses</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant opacity-0 reveal-up">
+                    We do not simply serve food; we orchestrate an emotional performance. Every plate is a carefully calibrated intersection of seasonal rarity, technical mastery, and artistic provocation.
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant/70 opacity-0 reveal-up">
+                    Led by visionary Chef de Cuisine, our kitchen embraces the tension between classic technique and avant-garde exploration, resulting in a tasting menu that challenges expectations while delivering profound comfort.
+                </p>
+</div>
+<div class="md:col-span-5 md:col-start-7 relative mt-12 md:mt-0 ambient-glow">
+<div class="aspect-[3/4] overflow-hidden rounded-sm glass-panel p-2">
+<img class="w-full h-full object-cover rounded-sm parallax-img" data-alt="An editorial style portrait of a sleek, modern dining room interior in a luxury restaurant. Dramatic chiaroscuro lighting highlights a single, impeccably set table with minimalist glassware and a bespoke ceramic plate. The background is engulfed in sophisticated shadows with a subtle, warm amber glow emanating from a hidden architectural light source. The aesthetic is extremely high-end, moody, and exclusive." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYVQOCZKJ_2l5HdDQvrxCYHPxwhz51KPJkOFnkz9hMrcmglMnVg8VPnbmyTnrFMohexzr6ISqEVpLPqkmRXYDXun6yAx2kVXq8HBKhbxvzZuNQaDLxtrHwiY_gwMkMPlwpqEn_E-cFmzfPJK9EKgK6jEfCuGHt1Ss-RQMkqumNcbOu14ja3rkkvOM_SU6wgEUYTsBdhWQEFNpIHSoP0Il9aejKqLLUFsBjkvXLGPv77W1xXyticbfp4qUoQUKRRCSxrNorxTr7Ko0=s0"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-dim w-full py-section-padding flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop space-y-unit">
+<div class="font-display-xl-mobile md:font-display-xl text-headline-lg-mobile md:text-headline-lg text-primary mb-8 tracking-tighter">L'ÉCLAT</div>
+<div class="flex space-x-gutter mb-12">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Careers</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Press</a>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant/50 uppercase tracking-widest text-[10px]">
+            © 2024 L'ÉCLAT CULINAIRE. ALL RIGHTS RESERVED.
+        </p>
+</footer>
+<script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Custom Cursor Logic
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        const magneticTargets = document.querySelectorAll('.magnetic-target');
+        
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(cursorDot, { x: e.clientX, y: e.clientY, duration: 0.1, ease: "power2.out" });
+            gsap.to(cursorOutline, { x: e.clientX, y: e.clientY, duration: 0.4, ease: "power2.out" });
+        });
+
+        magneticTargets.forEach(target => {
+            target.addEventListener('mouseenter', () => {
+                gsap.to(cursorOutline, { scale: 1.5, backgroundColor: 'rgba(229, 196, 131, 0.1)', duration: 0.3 });
+            });
+            target.addEventListener('mouseleave', () => {
+                gsap.to(cursorOutline, { scale: 1, backgroundColor: 'transparent', duration: 0.3 });
+                gsap.to(target, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.3)" });
+            });
+            target.addEventListener('mousemove', (e) => {
+                const rect = target.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                gsap.to(target, { x: x * 0.2, y: y * 0.2, duration: 0.3, ease: "power2.out" });
+            });
+        });
+
+        // Text Reveals
+        document.querySelectorAll('.gsap-reveal-text').forEach(textBlock => {
+            let text = textBlock.innerHTML;
+            // Simple split by words, keeping HTML tags intact (naive approach for demo)
+            let splitText = text.replace(/(<[^>]*>)|(\w+)/g, function(match, p1, p2) {
+                if(p1) return p1;
+                return `<span class="gsap-reveal-word">${p2}</span>`;
+            });
+            textBlock.innerHTML = splitText;
+
+            gsap.from(textBlock.querySelectorAll('.gsap-reveal-word'), {
+                scrollTrigger: {
+                    trigger: textBlock,
+                    start: "top 85%",
+                },
+                y: "110%",
+                duration: 1,
+                ease: "power4.out",
+                stagger: 0.05
+            });
+        });
+
+        // Fade Up Elements
+        gsap.utils.toArray('.reveal-up').forEach(elem => {
+            gsap.to(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 90%",
+                },
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power3.out"
+            });
+        });
+        
+        // Initial setup for reveal-up classes (they start with opacity-0 in CSS, but let's set Y offset via JS to avoid flicker if JS fails)
+        gsap.set('.reveal-up', { y: 30 });
+
+        // Parallax Image
+        gsap.to('.parallax-img', {
+            scrollTrigger: {
+                trigger: '.parallax-img',
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true
+            },
+            y: -50,
+            scale: 1.1,
+            ease: "none"
+        });
+        
+        // Hero Image subtle zoom
+        gsap.to('.hero-img', {
+            scale: 1.15,
+            duration: 20,
+            ease: "none",
+            repeat: -1,
+            yoyo: true
+        });
+
+    </script>
+</body></html>

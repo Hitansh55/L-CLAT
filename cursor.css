@@ -1,0 +1,45 @@
+html {
+    cursor: none;
+}
+
+.cursor-dot, .cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #e5c483;
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(229, 196, 131, 0.5);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+#dish-preview-cursor {
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.25rem;
+}
+
+#dish-preview-cursor.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
