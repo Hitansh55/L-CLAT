@@ -4,9 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const magneticTargets = document.querySelectorAll('.magnetic-target');
     
     if (cursorDot && cursorOutline && typeof gsap !== 'undefined') {
+        gsap.set(cursorDot, { xPercent: -50, yPercent: -50 });
+        gsap.set(cursorOutline, { xPercent: -50, yPercent: -50 });
+        
+        let xTo = gsap.quickTo(cursorDot, "x", {duration: 0.1, ease: "power3"});
+        let yTo = gsap.quickTo(cursorDot, "y", {duration: 0.1, ease: "power3"});
+        
+        let xOutlineTo = gsap.quickTo(cursorOutline, "x", {duration: 0.3, ease: "power3"});
+        let yOutlineTo = gsap.quickTo(cursorOutline, "y", {duration: 0.3, ease: "power3"});
+
         window.addEventListener('mousemove', (e) => {
-            gsap.to(cursorDot, { x: e.clientX, y: e.clientY, duration: 0.1, ease: "power2.out" });
-            gsap.to(cursorOutline, { x: e.clientX, y: e.clientY, duration: 0.4, ease: "power2.out" });
+            xTo(e.clientX);
+            yTo(e.clientY);
+            xOutlineTo(e.clientX);
+            yOutlineTo(e.clientY);
         });
 
         magneticTargets.forEach(target => {
