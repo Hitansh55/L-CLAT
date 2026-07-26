@@ -344,11 +344,21 @@
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 hover:bg-primary/10 px-4 py-2 rounded uppercase" href="contact-reservations.html">Contact</a>
 </div>
 <a class="hidden md:inline-flex btn-ghost-gold font-label-caps text-label-caps uppercase px-6 py-3 rounded-DEFAULT magnetic-target" href="#reservations">Book a Table</a>
-<button class="md:hidden text-primary">
+<button id="mobile-menu-btn" class="md:hidden text-primary">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
 </button>
 </div>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-surface/98 backdrop-blur-3xl flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-500">
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="the-experience.html">Experience</a>
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="interactive-menu.html">Menu</a>
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="our-story.html">Story</a>
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact-reservations.html">Contact</a>
+    <a class="btn-ghost-gold font-label-caps text-label-caps uppercase px-8 py-4 rounded-DEFAULT mt-8 border border-primary text-primary" href="contact-reservations.html">Book a Table</a>
+</div>
+
 <!-- Hero Section -->
 <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
@@ -402,7 +412,31 @@
 <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        // Custom cursor logic is handled by cursor.js
+        // Custom Cursor Logic
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        const magneticTargets = document.querySelectorAll('.magnetic-target');
+        
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(cursorDot, { x: e.clientX, y: e.clientY, duration: 0.1, ease: "power2.out" });
+            gsap.to(cursorOutline, { x: e.clientX, y: e.clientY, duration: 0.4, ease: "power2.out" });
+        });
+
+        magneticTargets.forEach(target => {
+            target.addEventListener('mouseenter', () => {
+                gsap.to(cursorOutline, { scale: 1.5, backgroundColor: 'rgba(229, 196, 131, 0.1)', duration: 0.3 });
+            });
+            target.addEventListener('mouseleave', () => {
+                gsap.to(cursorOutline, { scale: 1, backgroundColor: 'transparent', duration: 0.3 });
+                gsap.to(target, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.3)" });
+            });
+            target.addEventListener('mousemove', (e) => {
+                const rect = target.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                gsap.to(target, { x: x * 0.2, y: y * 0.2, duration: 0.3, ease: "power2.out" });
+            });
+        });
 
         // Text Reveals
         document.querySelectorAll('.gsap-reveal-text').forEach(textBlock => {

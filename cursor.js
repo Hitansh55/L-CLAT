@@ -4,20 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const magneticTargets = document.querySelectorAll('.magnetic-target');
     
     if (cursorDot && cursorOutline && typeof gsap !== 'undefined') {
-        gsap.set(cursorDot, { xPercent: -50, yPercent: -50 });
-        gsap.set(cursorOutline, { xPercent: -50, yPercent: -50 });
-        
-        let xTo = gsap.quickTo(cursorDot, "x", {duration: 0.1, ease: "power3"});
-        let yTo = gsap.quickTo(cursorDot, "y", {duration: 0.1, ease: "power3"});
-        
-        let xOutlineTo = gsap.quickTo(cursorOutline, "x", {duration: 0.3, ease: "power3"});
-        let yOutlineTo = gsap.quickTo(cursorOutline, "y", {duration: 0.3, ease: "power3"});
-
         window.addEventListener('mousemove', (e) => {
-            xTo(e.clientX);
-            yTo(e.clientY);
-            xOutlineTo(e.clientX);
-            yOutlineTo(e.clientY);
+            gsap.to(cursorDot, { x: e.clientX, y: e.clientY, duration: 0.1, ease: "power2.out" });
+            gsap.to(cursorOutline, { x: e.clientX, y: e.clientY, duration: 0.4, ease: "power2.out" });
         });
 
         magneticTargets.forEach(target => {
@@ -34,6 +23,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 const y = e.clientY - rect.top - rect.height / 2;
                 gsap.to(target, { x: x * 0.2, y: y * 0.2, duration: 0.3, ease: "power2.out" });
             });
+        });
+    }
+
+    // Mobile Menu Logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuIcon = mobileMenuBtn ? mobileMenuBtn.querySelector('span') : null;
+
+    if (mobileMenuBtn && mobileMenu && mobileMenuIcon) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('opacity-100');
+            if (isOpen) {
+                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                mobileMenuIcon.innerText = 'menu';
+            } else {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                mobileMenuIcon.innerText = 'close';
+            }
         });
     }
 });

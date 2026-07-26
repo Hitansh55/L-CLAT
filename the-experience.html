@@ -182,13 +182,11 @@
             transform: translateY(0);
         }
         .parallax-image {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            transition: clip-path 1.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .parallax-image.is-visible {
-            opacity: 1;
-            transform: translateY(0);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
         .glow-hover:hover::after {
             content: '';
@@ -200,15 +198,7 @@
         }
     </style>
     <link rel="stylesheet" href="cursor.css">
-
-    <style>
-        .hero-img, .parallax-img, .reveal-up, .parallax-image, .reveal-text {
-            will-change: transform, opacity;
-            transform: translateZ(0);
-        }
-    </style>
 </head>
-
 <body class="text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary">
 <!-- Top Navigation from Shared Components -->
 <header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10 shadow-none transition-all duration-300" id="global-nav">
@@ -220,8 +210,18 @@
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500" href="our-story.html">Story</a>
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500" href="contact-reservations.html">Contact</a>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-surface/98 backdrop-blur-3xl flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-500">
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="the-experience.html">Experience</a>
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="interactive-menu.html">Menu</a>
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="our-story.html">Story</a>
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact-reservations.html">Contact</a>
+    <a class="btn-ghost-gold font-label-caps text-label-caps uppercase px-8 py-4 rounded-DEFAULT mt-8 border border-primary text-primary" href="contact-reservations.html">Book a Table</a>
+</div>
+
 <button class="font-label-caps text-label-caps border border-primary text-primary px-8 py-3 hover:bg-primary hover:text-background transition-all duration-500 ease-in-out hidden md:block">Book a Table</button>
-<button class="md:hidden text-primary">
+<button id="mobile-menu-btn" class="md:hidden text-primary">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -229,7 +229,7 @@
 <!-- Hero Section -->
 <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img loading="lazy" class="w-full h-full object-cover opacity-60 scale-105 transform origin-center transition-transform duration-[10s] ease-out hover:scale-100" data-alt="A cinematic, wide-angle shot of a highly exclusive, dimly lit Michelin-star dining room. The atmosphere is hushed and reverent, with luxurious dark obsidian surfaces contrasting against warm, focused pools of golden light illuminating individual tables. The composition is symmetrical and grand, evoking a sense of high-end culinary theatre." src="/wide_dining_room.webp"/>
+<img class="w-full h-full object-cover opacity-60 scale-105 transform origin-center transition-transform duration-[10s] ease-out hover:scale-100" data-alt="A cinematic, wide-angle shot of a highly exclusive, dimly lit Michelin-star dining room. The atmosphere is hushed and reverent, with luxurious dark obsidian surfaces contrasting against warm, focused pools of golden light illuminating individual tables. The composition is symmetrical and grand, evoking a sense of high-end culinary theatre." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsEvX-Ls6KBlCTrelW4p0IWQ5eGeFrMiDmI24XbIwwaEEMElzNf0zdU40P9I96bEfVvtR4bJnmxH-HW2H8nF3bRAs9Y-i4kRSc0DvazoJju42jFsIrA66x41rpgJmuKmOBsdSgVAprhR9rgrL3Qki7swIM4sPS-iyCpHXIigLycaaV6QWrz3dTl2sAGNqFDjExUw6fKcx_pxshSXyq9JtF7ZlSBi2zNTImM8Towt-iE5FrKkjENzmZjrh84xTWelw16SqkMPbBKN0=s0"/>
 <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background"></div>
 </div>
 <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto flex flex-col items-center mt-20">
@@ -255,7 +255,7 @@
 </div>
 <div class="md:col-span-5 md:col-start-8 mt-12 md:mt-0 relative">
 <div class="relative w-full aspect-[3/4] overflow-hidden parallax-image">
-<img loading="lazy" class="w-full h-full object-cover" data-alt="A close-up, highly detailed shot of a sommelier pouring a deep red wine into a crystal glass. The setting is luxurious and dark, with a soft, warm golden glow highlighting the texture of the liquid and the pristine clarity of the glass. The background is a soft blur of obsidian tones and subtle light reflections, emphasizing the artistry and precision of the service." src="/sommelier.webp"/>
+<img class="w-full h-full object-cover" data-alt="A close-up, highly detailed shot of a sommelier pouring a deep red wine into a crystal glass. The setting is luxurious and dark, with a soft, warm golden glow highlighting the texture of the liquid and the pristine clarity of the glass. The background is a soft blur of obsidian tones and subtle light reflections, emphasizing the artistry and precision of the service." src="sommelier.png"/>
 </div>
 </div>
 </div>
@@ -271,6 +271,16 @@
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Press</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact-reservations.html">Contact</a>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-surface/98 backdrop-blur-3xl flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-500">
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="the-experience.html">Experience</a>
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="interactive-menu.html">Menu</a>
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="our-story.html">Story</a>
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact-reservations.html">Contact</a>
+    <a class="btn-ghost-gold font-label-caps text-label-caps uppercase px-8 py-4 rounded-DEFAULT mt-8 border border-primary text-primary" href="contact-reservations.html">Book a Table</a>
+</div>
+
 <p class="font-label-caps text-label-caps text-on-surface-variant opacity-50">© 2024 L'ÉCLAT. ALL RIGHTS RESERVED.</p>
 </footer>
 <script>
@@ -297,22 +307,15 @@
 
             // Nav scroll effect
             const nav = document.getElementById('global-nav');
-            let isScrolling = false;
             window.addEventListener('scroll', () => {
-                if (!isScrolling) {
-                    window.requestAnimationFrame(() => {
-                        if (window.scrollY > 50) {
-                            nav.classList.add('py-2');
-                            nav.classList.remove('py-unit');
-                        } else {
-                            nav.classList.remove('py-2');
-                            nav.classList.add('py-unit');
-                        }
-                        isScrolling = false;
-                    });
-                    isScrolling = true;
+                if (window.scrollY > 50) {
+                    nav.classList.add('py-2');
+                    nav.classList.remove('py-unit');
+                } else {
+                    nav.classList.remove('py-2');
+                    nav.classList.add('py-unit');
                 }
-            }, { passive: true });
+            });
         });
     </script>
     <div class="cursor-dot"></div>

@@ -321,8 +321,8 @@
             transform: translateZ(0);
         }
     </style>
-  <script type="module" crossorigin src="/assets/cursor-VkgKqZ6_.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/cursor-uImDrgPC.css">
+  <script type="module" crossorigin src="/assets/cursor-GK3_YsRQ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/cursor-BGy_VQUZ.css">
 </head>
 
 <body class="antialiased min-h-screen relative font-body-md selection:bg-primary selection:text-on-primary">
@@ -340,11 +340,21 @@
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-500 hover:bg-primary/10 px-4 py-2 rounded uppercase" href="contact-reservations.html">Contact</a>
 </div>
 <a class="hidden md:inline-flex btn-ghost-gold font-label-caps text-label-caps uppercase px-6 py-3 rounded-DEFAULT magnetic-target" href="#reservations">Book a Table</a>
-<button class="md:hidden text-primary">
+<button id="mobile-menu-btn" class="md:hidden text-primary">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
 </button>
 </div>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-surface/98 backdrop-blur-3xl flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-500">
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="the-experience.html">Experience</a>
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="interactive-menu.html">Menu</a>
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="our-story.html">Story</a>
+    <a class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact-reservations.html">Contact</a>
+    <a class="btn-ghost-gold font-label-caps text-label-caps uppercase px-8 py-4 rounded-DEFAULT mt-8 border border-primary text-primary" href="contact-reservations.html">Book a Table</a>
+</div>
+
 <!-- Main Content -->
 <main class="pt-[160px] pb-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <!-- Header -->
