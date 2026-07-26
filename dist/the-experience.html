@@ -298,15 +298,22 @@
 
             // Nav scroll effect
             const nav = document.getElementById('global-nav');
+            let isScrolling = false;
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    nav.classList.add('py-2');
-                    nav.classList.remove('py-unit');
-                } else {
-                    nav.classList.remove('py-2');
-                    nav.classList.add('py-unit');
+                if (!isScrolling) {
+                    window.requestAnimationFrame(() => {
+                        if (window.scrollY > 50) {
+                            nav.classList.add('py-2');
+                            nav.classList.remove('py-unit');
+                        } else {
+                            nav.classList.remove('py-2');
+                            nav.classList.add('py-unit');
+                        }
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
                 }
-            });
+            }, { passive: true });
         });
     </script>
     <div class="cursor-dot"></div>
